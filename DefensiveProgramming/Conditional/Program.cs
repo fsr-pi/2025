@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 Console.WriteLine("Start");
 
-#if (DEMO)
+#if DEMO
 Console.WriteLine("Print something...");
 #endif
 
