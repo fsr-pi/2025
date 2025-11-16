@@ -1,0 +1,24 @@
+﻿@{
+  ViewData["Title"] = "Home page";
+}
+
+<p>
+  The examples show a simple example of using MVC and ASP.NET Core. 
+</p>
+<p>
+  The example with countries shows data from a table that has no foreign keys. 
+  When displayed, it shows n data per page, 
+  with information about the number of items per page written to the configuration file(s). 
+  It also ensures that when we update a country, after the update we return to the same page 
+  we were on before the update. 
+  It is possible to add new countries, update and delete existing ones, updating on a separate page. 
+</p>
+<p>
+  The example with the cities demonstrates the creation of a dropdown list (selecting a country)
+  to select a foreign key value. 
+  Also, the example uses the <a href="https://htmx.org">htmx</a> library, 
+  which allows dynamic updating of data in the table without having to open a separate page. 
+</p>
+  The example with the partners is an example with generalization and specialization
+  using view to retrieve data, and autocomplete instead of dropdown list to choose a city.
+</p>
