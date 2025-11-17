@@ -9,7 +9,7 @@ namespace MVC.UITests
 {
   public class CitiesPagesShould 
   {
-    private const string TestApp = "https://localhost:61775";
+    private const string TestApp = "https://localhost:7021";
 
     [Trait("Category", "UI Tests")]
     [Fact]
@@ -19,7 +19,7 @@ namespace MVC.UITests
       await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
       {
         Headless = false,   
-        SlowMo = 2000
+        SlowMo = 1000
       });
       var context = await browser.NewContextAsync();
       // Open new page
@@ -55,13 +55,13 @@ namespace MVC.UITests
       #region Fill the test data and add it
 
       // Fill input[name="PostalCode"]
-      await page.GetByLabel("Postal Code").FillAsync("11");
+      await page.GetByLabel("Postal code").FillAsync("1234");
       // Fill input[name="CityName"]
-      await page.GetByLabel("City Name").FillAsync("_demo");
+      await page.GetByLabel("City name").FillAsync("_demo");
       // Select _A2
 
       var combo = page.GetByRole(AriaRole.Combobox, new() { Name = "Country" });
-      await combo.SelectOptionAsync(new[] { "_A2" });
+      await combo.SelectOptionAsync(new[] { "A2" });
       await combo.PressAsync("Tab"); //to lose the focus and trigger validation (i.e. remove previous validation errors)
 
       await page.GetByRole(AriaRole.Button, new() { Name = "Add" }).ClickAsync();
@@ -82,7 +82,7 @@ namespace MVC.UITests
       // Click input[name="PostalCode"]
       await page.ClickAsync("input[name=\"PostalCode\"]");
       // Fill input[name="PostalCode"]
-      await page.FillAsync("input[name=\"PostalCode\"]", "12");
+      await page.FillAsync("input[name=\"PostalCode\"]", "1235");
       // Click input[name="CityName"]
       await page.ClickAsync("input[name=\"CityName\"]");
       // Fill input[name="CityName"]

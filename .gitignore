@@ -501,3 +501,6 @@ typings/
 #bower and libman wwwroot/lib
 **/wwwroot/lib
 **/logs/internal-nlog.txt
+
+# some needed exceptions
+!MVC-EN/MVC-EN/Properties/launchSettings.json
