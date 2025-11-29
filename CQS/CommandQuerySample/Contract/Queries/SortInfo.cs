@@ -1,0 +1,15 @@
+﻿using System.Collections.Generic;
+
+namespace Contract.Queries;
+
+public class SortInfo
+{
+  public enum Order
+  {
+    ASCENDING, DESCENDING
+  }
+  /// <summary>
+  /// Pair columnName, order
+  /// </summary>
+  public List<KeyValuePair<string, Order>> ColumnOrder { get; set; } = new List<KeyValuePair<string, Order>>();
+}
