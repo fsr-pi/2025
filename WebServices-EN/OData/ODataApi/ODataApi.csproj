@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <UserSecretsId>Firm</UserSecretsId>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.1.1" />   
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\EFModel\EFModel.csproj" />
+    <ProjectReference Include="..\ODataApi.Contract\ODataApi.Contract.csproj" />
+  </ItemGroup>
+
+</Project>
