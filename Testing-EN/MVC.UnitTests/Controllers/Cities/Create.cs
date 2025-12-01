@@ -84,9 +84,9 @@ namespace MVC.UnitTests.Controllers.Cities
 
       controller.ModelState.Should().NotBeNull(because: "city without data should have validation errors")
                 .And.ContainKeys(
-                  nameof(City.PostalCode),
-                  nameof(City.CityName),
-                  nameof(City.CountryCode)
+                  nameof(CityViewModel.PostalCode),
+                  nameof(CityViewModel.CityName),
+                  nameof(CityViewModel.CountryCode)
                 );      
     }
 
