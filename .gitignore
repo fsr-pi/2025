@@ -504,3 +504,4 @@ typings/
 
 # some needed exceptions
 !MVC-EN/MVC-EN/Properties/launchSettings.json
+!WebServices-EN/**/Properties/launchSettings.json
