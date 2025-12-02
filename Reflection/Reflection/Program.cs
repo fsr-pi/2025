@@ -12,7 +12,7 @@ class Program
 {
   static void Main(string[] args)
   {
-    string assemblyLocation = @"..\\..\\..\\..\\LottoImplementation\bin\Debug\net8.0\LottoImplementation.dll";
+    string assemblyLocation = @"../../../../LottoImplementation/bin/Debug/net8.0/LottoImplementation.dll";
     Console.WriteLine("Loading dll from file: " + Path.GetFullPath(assemblyLocation));
     AssemblyLoadContext loadctx = AssemblyLoadContext.Default;
     Assembly asm = loadctx.LoadFromAssemblyPath(Path.GetFullPath(assemblyLocation));
